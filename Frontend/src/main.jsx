@@ -13,6 +13,7 @@ import ResumeScore from "./pages/dashboard/resume/ResumeScore.jsx";
 import InterviewPrep from "./pages/dashboard/resume/InterviewPrep.jsx";
 import { resumeStore } from "./store/store";
 import { Provider } from "react-redux";
+import AboutPage from "./pages/about/AboutPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "/about",
+    element: <AboutPage />,
   },
   {
     path: "/auth/sign-in",

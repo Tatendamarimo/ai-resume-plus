@@ -37,18 +37,17 @@ function Header({ user }) {
   };
 
   return (
-    <header 
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled 
+    <header
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-gray-900/95 backdrop-blur-xl border-b border-gray-800 shadow-2xl"
           : "bg-gray-900/90 backdrop-blur-lg"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo Section */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="flex items-center gap-3 group"
           >
             <motion.div
@@ -65,6 +64,11 @@ function Header({ user }) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
+            <Link to="/about">
+              <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800">
+                About
+              </Button>
+            </Link>
             {user ? (
               <>
                 <Button
@@ -141,6 +145,15 @@ function Header({ user }) {
               variants={menuVariants}
               className="md:hidden py-6 space-y-4 border-t border-gray-800 mt-4 bg-gray-900/97 backdrop-blur-2xl"
             >
+              <Link to="/about" onClick={() => setMobileMenuOpen(false)}>
+                <Button
+                  fullWidth
+                  variant="ghost"
+                  className="justify-start px-8 py-5 rounded-xl text-gray-300 hover:bg-gray-800 border border-gray-800 text-lg"
+                >
+                  About
+                </Button>
+              </Link>
               {user ? (
                 <>
                   <Button
