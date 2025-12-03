@@ -4,7 +4,7 @@ AI Resume Plus is a modern, AI-powered resume builder designed to help job seeke
 ##  Features
 
 - **AI-Powered Content Generation**: Leverage AI to generate professional summaries, experience descriptions, and skills based on your input.
-- **Real-time Preview**: See your resume come to life as you edit it with our split-screen editor.
+- **Real-time Preview**: See your resume come to life as you edit it with a split-screen editor.
 - **ATS-Friendly Templates**: Export resumes that are optimised for Applicant Tracking Systems.
 - **Secure Authentication**: User accounts are protected with secure login and registration.
 - **Dashboard**: Manage multiple resumes, update them anytime, and track your application progress.
