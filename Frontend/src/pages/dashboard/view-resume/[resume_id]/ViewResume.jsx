@@ -6,7 +6,7 @@ import ResumePreview from "../../edit-resume/components/PreviewPage";
 import { useDispatch } from "react-redux";
 import { addResumeData } from "@/features/resume/resumeFeatures";
 import { toast } from "sonner";
-import html2pdf from "html2pdf.js";
+import html2pdf from "html2pdf.js/dist/html2pdf.min.js";
 
 function ViewResume() {
   const [resumeInfo, setResumeInfo] = React.useState({});
@@ -82,16 +82,16 @@ function ViewResume() {
             <p className="text-gray-600 md:text-lg">
               Download or share your professionally crafted resume
             </p>
-            
+
             <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-6 md:mt-10">
-              <Button 
+              <Button
                 onClick={HandleDownload}
                 className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
               >
                 Download PDF
               </Button>
-              
-              <Button 
+
+              <Button
                 variant="outline"
                 className="w-full md:w-auto px-8 py-3 border-primary text-primary hover:bg-primary/10"
                 onClick={HandleShare}
@@ -105,8 +105,8 @@ function ViewResume() {
 
       {/* Resume content (only this appears in PDF) */}
       <div className="w-full max-w-7xl px-4 pb-8 md:pb-12">
-        <div 
-          id="resumePrint" 
+        <div
+          id="resumePrint"
           className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200"
           style={{ minHeight: '297mm' }}
         >
