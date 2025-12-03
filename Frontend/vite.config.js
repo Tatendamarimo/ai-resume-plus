@@ -9,4 +9,12 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ['html2pdf.js']
+  },
+  build: {
+    commonjsOptions: {
+      include: [/html2pdf\.js/, /node_modules/]
+    }
+  }
 })

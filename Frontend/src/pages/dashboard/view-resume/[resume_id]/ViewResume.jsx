@@ -6,7 +6,7 @@ import ResumePreview from "../../edit-resume/components/PreviewPage";
 import { useDispatch } from "react-redux";
 import { addResumeData } from "@/features/resume/resumeFeatures";
 import { toast } from "sonner";
-import html2pdf from "html2pdf.js/dist/html2pdf.min.js";
+import html2pdf from "html2pdf.js";
 
 function ViewResume() {
   const [resumeInfo, setResumeInfo] = React.useState({});
