@@ -11,16 +11,5 @@
             "src": "/(.*)",
             "dest": "/api/index.js"
         }
-    ],
-    "env": {
-        "MONGODB_URI": "@mongodb_uri",
-        "ACCESS_TOKEN_SECRET": "@access_token_secret",
-        "ACCESS_TOKEN_EXPIRY": "@access_token_expiry",
-        "REFRESH_TOKEN_SECRET": "@refresh_token_secret",
-        "REFRESH_TOKEN_EXPIRY": "@refresh_token_expiry",
-        "CLOUDINARY_CLOUD_NAME": "@cloudinary_cloud_name",
-        "CLOUDINARY_API_KEY": "@cloudinary_api_key",
-        "CLOUDINARY_API_SECRET": "@cloudinary_api_secret",
-        "ALLOWED_SITE": "@allowed_site"
-    }
+    ]
 }
