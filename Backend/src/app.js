@@ -23,6 +23,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// Health Check Route
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "AI Resume Plus API is running",
+    version: "1.0.0",
+    endpoints: {
+      users: "/api/users",
+      resumes: "/api/resumes"
+    }
+  });
+});
+
 // Routes
 app.use("/api/users", userRouter);
 app.use("/api/resumes", resumeRouter);
