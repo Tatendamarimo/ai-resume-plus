@@ -1,18 +1,18 @@
 import Header from "@/components/custom/Header";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { 
-  FaGithub, 
-  FaMagic, 
-  FaRocket, 
+import {
+  FaGithub,
+  FaMagic,
+  FaRocket,
   FaShieldAlt,
   FaRegChartBar,
   FaCloudDownloadAlt
 } from "react-icons/fa";
-import { 
-  FiCheckCircle, 
-  FiEdit3, 
-  FiDownload, 
+import {
+  FiCheckCircle,
+  FiEdit3,
+  FiDownload,
   FiCode,
   FiZap
 } from "react-icons/fi";
@@ -34,7 +34,7 @@ function HomePage() {
     const fetchUser = async () => {
       try {
         const response = await startUser();
-        response.statusCode === 200 
+        response.statusCode === 200
           ? dispatch(addUserData(response.data))
           : dispatch(addUserData(null));
       } catch (error) {
@@ -52,7 +52,7 @@ function HomePage() {
   return (
     <>
       <Header user={user} />
-      
+
       {/* Cyberpunk-style Hero Section */}
       <section className="relative pt-32 pb-48 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         {/* Animated grid background */}
@@ -66,9 +66,9 @@ function HomePage() {
               <span className="block mb-4">AI-Powered</span>
               <span className="block typewriter-effect">Resume+</span>
             </h1>
-            
+
             <p className="max-w-3xl mx-auto mt-8 text-xl text-gray-300">
-               Our AI handles the heavy lifting while you focus on storytelling
+              Our AI handles the heavy lifting while you focus on storytelling
             </p>
 
             <div className="flex flex-col gap-4 mt-12 sm:flex-row sm:justify-center">
@@ -80,7 +80,7 @@ function HomePage() {
                 <FiZap className="w-6 h-6 transition-transform group-hover:rotate-12" />
                 Get Started
               </Button>
-              
+
               <Button
                 variant="outline"
                 size="xl"
@@ -111,7 +111,7 @@ function HomePage() {
                 desc: "End-to-end encrypted resume processing"
               }
             ].map((feature, i) => (
-              <div 
+              <div
                 key={i}
                 className="relative p-8 overflow-hidden rounded-2xl bg-background/10 backdrop-blur-lg border border-white/10 hover:border-primary/50 transition-all group"
               >
@@ -158,7 +158,7 @@ function HomePage() {
                         ))}
                       </div>
                     </div>
-                    
+
                     {/* Right Panel */}
                     <div className="flex-1 border-l border-gray-800 pl-6">
                       <div className="mb-6 h-9 bg-gray-800 rounded-lg w-2/3" />
@@ -178,37 +178,18 @@ function HomePage() {
       {/* Glowing Footer */}
       <footer className="border-t border-gray-800 bg-gray-900">
         <div className="px-6 py-12 mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
-            <div className="space-y-4">
+          <div className="flex justify-center">
+            <div className="space-y-4 text-center">
               <h3 className="text-lg font-semibold text-white">Resume</h3>
               <p className="text-gray-400">
                 Next-generation resume optimization powered by AI
               </p>
-              <div className="flex gap-4">
+              <div className="flex justify-center gap-4">
                 <Button variant="ghost" size="icon" onClick={handleExternalLink}>
                   <FaGithub className="w-5 h-5" />
                 </Button>
               </div>
             </div>
-
-            {[
-              { title: "Product", links: ["Features", "Templates", "API", "Pricing"] },
-              { title: "Company", links: ["About", "Blog", "Careers", "Contact"] },
-              { title: "Legal", links: ["Privacy", "Terms", "Security"] }
-            ].map((section, i) => (
-              <div key={i} className="space-y-4">
-                <h3 className="text-lg font-semibold text-white">{section.title}</h3>
-                <ul className="space-y-2">
-                  {section.links.map((link, j) => (
-                    <li key={j}>
-                      <Button variant="link" className="text-gray-400 hover:text-primary">
-                        {link}
-                      </Button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
           </div>
 
           <div className="pt-8 mt-12 border-t border-gray-800">
